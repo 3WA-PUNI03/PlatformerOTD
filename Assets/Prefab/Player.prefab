@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isGrounded: 0
+  _groundContactNumber: 0
   _onGrounded:
     m_PersistentCalls:
       m_Calls:
@@ -564,8 +565,9 @@ MonoBehaviour:
   _rb: {fileID: 2096128514889018448}
   _moveInput: {fileID: 9074197325012466274, guid: a800e99c09c41714f895e15da98a29bd, type: 3}
   _jumpInput: {fileID: 2173216561860533348, guid: a800e99c09c41714f895e15da98a29bd, type: 3}
+  _groundChecker: {fileID: 7400716019123283925}
   _movementSpeed: 10
-  _jumpPower: 500
+  _jumpPower: 600
 --- !u!1 &5678016946931611208
 GameObject:
   m_ObjectHideFlags: 0

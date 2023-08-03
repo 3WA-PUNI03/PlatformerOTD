@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] InputActionReference _moveInput;
     [SerializeField] InputActionReference _jumpInput;
+    [SerializeField] GroundChecker _groundChecker;
 
     [Header("Configuration")]
     [SerializeField] float _movementSpeed;
@@ -20,7 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Si le joueur vient d'appuyer sur la touche de saut => on donne une impulsion vers le haut au rigidbody
-        if(_jumpInput.action.WasPressedThisFrame())
+        // On s'adresse également au GroundChecker pour savoir si on touche le sol ou pas.
+        // Si on ne touche pas le sol => on n'autorise pas le saut.
+        if (_jumpInput.action.WasPressedThisFrame()  && _groundChecker.IsGrounded == true)
         {
             _rb.AddForce(new Vector2(0, _jumpPower));
         }

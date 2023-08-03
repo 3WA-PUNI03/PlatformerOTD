@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GroundChecker : MonoBehaviour
 {
     [SerializeField] bool _isGrounded;
     [SerializeField] int _groundContactNumber;
     [SerializeField] UnityEvent _onGrounded;
+
+    public bool IsGrounded { get => _isGrounded; }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,6 +37,8 @@ public class GroundChecker : MonoBehaviour
                 _isGrounded = false;
             }
         }
+
+
     }
 
 }
