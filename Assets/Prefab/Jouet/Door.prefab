@@ -143,4 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c40028281ef96f47aab68a32f83cb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Level2
+  _renderer: {fileID: 0}
+  _openDoorSprite: {fileID: 0}
+  _canvasToActivate: {fileID: 0}
+  _waitBeforeMenuDisplay: 2
+  _onFinishedLevel:
+    m_PersistentCalls:
+      m_Calls: []

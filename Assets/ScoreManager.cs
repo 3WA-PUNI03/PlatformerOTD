@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _txt;
+    [SerializeField] TextMeshProUGUI _txtEndScreen;
 
     [Header("Debug")]
     [SerializeField] int _currentScore;
@@ -22,6 +23,7 @@ public class ScoreManager : MonoBehaviour
     {
         _currentScore += amount;
         _txt.text = _currentScore.ToString();
+        _txtEndScreen.text = _currentScore.ToString();
     }
 
 
